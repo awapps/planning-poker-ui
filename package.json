@@ -1,0 +1,21 @@
+{
+  "name": "planning-poker-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awapps/planning-poker-ui.git"
+  },
+  "keywords": [],
+  "author": "André Eberhardt and William Martins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awapps/planning-poker-ui/issues"
+  },
+  "homepage": "https://github.com/awapps/planning-poker-ui#readme"
+}
