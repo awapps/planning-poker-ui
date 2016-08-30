@@ -2,6 +2,7 @@ const path    = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -35,6 +36,13 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true
             }
         }),
+
+        new CopyWebpackPlugin([{
+            from: 'manifest.json',
+        }, {
+            from: 'img',
+            to: 'img'
+        }]),
 
         new webpack.DefinePlugin({
             'process.env': {
