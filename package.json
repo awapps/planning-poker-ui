@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/awapps/planning-poker-ui/issues"
   },
-  "homepage": "https://github.com/awapps/planning-poker-ui#readme"
+  "homepage": "https://github.com/awapps/planning-poker-ui#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }

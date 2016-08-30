@@ -1,0 +1,19 @@
+{
+    "short_name": "Planning Poker",
+    "name": "Planning Poker",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "img/Cards-48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "img/Cards-96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme": "#a040a0",
+    "background_color": "#eeeeee"
+}
