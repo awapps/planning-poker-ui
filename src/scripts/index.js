@@ -58,17 +58,8 @@ const Vote = () => {
             label: '89'
         }],
         [{
-            value: 'W',
-            label: 'W'
-        }, {
-            value: 'X',
-            label: 'X'
-        }, {
-            value: 'Y',
-            label: 'Y'
-        }, {
-            value: 'Z',
-            label: 'Z'
+            value: '?',
+            label: '?'
         }]
     ];
 
