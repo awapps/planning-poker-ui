@@ -61,18 +61,20 @@ body {
 
 .vote__option {
     width: calc(100% / 3);
-    font-size: 30px;
+    font-size: 40px;
     text-shadow: 1px 1px 3px #000;
 }
 
 @media (min-width: 400px) {
     .vote__option {
         width: calc(100% / 4);
+        font-size: 45px;
     }
 }
 
 @media (min-width: 900px) {
     .vote__option {
         width: calc(100% / 6);
+        font-size: 50px;
     }
 }
