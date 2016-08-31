@@ -7,9 +7,10 @@ import '../stylesheets/index.css';
 const domNode = document.querySelector('.js-react-app');
 
 const palette = [
-    '#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#34495e',
-    '#16a085', '#27ae60', '#2980b9', '#8e44ad', '#2c3e50',
-    '#e67e22', '#e74c3c', '#d35400'
+    'bg-navy', 'bg-blue', 'bg-aqua', 'bg-teal', 'bg-olive',
+    'bg-green', 'bg-lime', 'bg-yellow', 'bg-orange', 'bg-red',
+    'bg-maroon', 'bg-fuchsia', 'bg-purple', 'bg-black', 'bg-gray',
+    'bg-silver'
 ];
 
 const App = (props) =>
@@ -65,15 +66,23 @@ const Vote = () => {
 
     const groupClasses = ['flex-grow-3 flex-wrap', 'flex-grow-1'];
 
-    const renderOption = (option, i) =>
-        <div
-            className="vote__option flex flex-auto flex-column justify-center"
-            style={{
-                backgroundColor: palette[i % palette.length]
-            }}>
-            {option.label}
-        </div>
-    ;
+    const renderOption = (option, i) => {
+        const className = [
+            'vote__option',
+            'flex',
+            'flex-auto',
+            'flex-column',
+            'justify-center',
+            palette[i % palette.length]
+        ].join(' ');
+
+        return (
+            <div
+                className={className}>
+                {option.label}
+            </div>
+        );
+    };
 
     const renderOptionGroup = (optionGroup, i) => {
         const className = [
