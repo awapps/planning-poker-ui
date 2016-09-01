@@ -16,5 +16,7 @@
     <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
     <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
     <% } %>
+
+    <%= require('./register-service-workers.ejs')({serviceWorker: htmlWebpackPlugin.options.serviceWorker}) %>
 </body>
 </html>

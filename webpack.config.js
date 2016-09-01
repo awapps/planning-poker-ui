@@ -3,6 +3,9 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+
+const SERVICE_WORKER_FILENAME = 'planning-poker-service-worker.js'
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -25,6 +28,12 @@ module.exports = {
             test: /\.css$/,
             exclude: /node_modules/,
             loaders: ['style', 'css', 'postcss']
+        }, {
+            test: /\.ejs$/,
+            loader: 'ejs',
+            query: {
+                includePaths: [path.resolve(__dirname, 'src/templates/')]
+            }
         }]
     },
 
@@ -38,7 +47,8 @@ module.exports = {
                 removeRedundantAttributes: true,
                 removeScriptTypeAttributes: true,
                 removeStyleLinkTypeAttributes: true
-            }
+           },
+           serviceWorker: `/${SERVICE_WORKER_FILENAME}`
         }),
 
         new CopyWebpackPlugin([{
@@ -52,6 +62,11 @@ module.exports = {
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
+        }),
+
+        new SWPrecacheWebpackPlugin({
+            cacheId: 'planning-poker-cache',
+            filename: SERVICE_WORKER_FILENAME
         })
     ]
 };
