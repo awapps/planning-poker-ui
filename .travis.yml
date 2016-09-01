@@ -8,3 +8,6 @@ script:
 
 after_script:
   - npm run report
+
+notifications:
+  email: change
