@@ -19,6 +19,10 @@ const App = (props) =>
     </div>
 ;
 
+App.propTypes = {
+    children: React.PropTypes.node
+};
+
 const Vote = () => {
     const options = [
         [{
