@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
+    "dev": "webpack-dev-server --config webpack.dev.config.js",
     "test": "echo \"No test specified\" && exit 0",
     "lint": "eslint src/**/*.js",
-    "run-build": "webpack -p",
+    "run-build": "webpack -p --config webpack.prod.config.js",
     "report": "echo \"No report specified\" && exit 0",
     "postinstall": "npm run run-build",
     "build": "npm run lint && npm test && npm run run-build"
@@ -45,8 +46,10 @@
     "eslint-plugin-react": "^6.2.0",
     "html-webpack-plugin": "^2.22.0",
     "postcss-loader": "^0.11.1",
+    "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.1",
     "sw-precache-webpack-plugin": "^0.4.0",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
   }
 }
