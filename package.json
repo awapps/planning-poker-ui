@@ -10,6 +10,7 @@
     "lint": "eslint src/**/*.js",
     "run-build": "webpack -p --config webpack.prod.config.js",
     "report": "echo \"No report specified\" && exit 0",
+    "preinstall": "npm run lint",
     "postinstall": "npm run run-build",
     "build": "npm run lint && npm test && npm run run-build"
   },
