@@ -34,7 +34,9 @@ module.exports = Object.assign({}, webpackConfig, {
             serviceWorker: `/${constants.SERVICE_WORKER_FILENAME}`
         }),
 
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+
+        new webpack.OldWatchingPlugin() // VM issues
     ]),
 
     devServer: {
